@@ -77,7 +77,7 @@ document.body.style.overflow = 'auto';
 form.reset();
 
 // Update registrations display
-displayRegistrations();
+//displayRegistrations();
 
 // Submit to Formspark (real submission)
 this.submit();
