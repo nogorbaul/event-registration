@@ -65,7 +65,7 @@ registrations.push(registration);
 localStorage.setItem('registrations', JSON.stringify(registrations));
 
 // Display success message
-alert(`Registration Successful!\nYour Registration Number: ${regNumber}\nPlease save this number for future reference.`);
+alert(`Your Registration Number: ${regNumber}\nPlease Zelle the amount to 609-937-2008 and mention the Reg Number to complete registration\nWe will email your tickets within 30 minutes`);
 
 // Close modal and reset form
 modal.style.display = 'none';
