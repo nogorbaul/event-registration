@@ -48,6 +48,10 @@ hiddenInput.name = 'registration_number';
 hiddenInput.value = regNumber;
 this.appendChild(hiddenInput);
 
+// Debugiing
+alert(`Your Name: ${document.getElementById('fullName').value}\n`);
+  
+
 // For demo purposes - store in localStorage
 const registration = {
 regNumber: regNumber,
