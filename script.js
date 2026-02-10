@@ -49,7 +49,7 @@ hiddenInput.value = regNumber;
 this.appendChild(hiddenInput);
 
 // Debugiing
-alert(`Your Name: ${document.getElementById('fullName').value}\n`);
+//alert(`Your Name: ${document.getElementById('fullName').value}\n`);
   
 
 // For demo purposes - store in localStorage
@@ -69,7 +69,7 @@ registrations.push(registration);
 localStorage.setItem('registrations', JSON.stringify(registrations));
 
 // Display success message
-alert(`Your Registration Number: ${regNumber}\nPlease Zelle the amount to 609-937-2008 and mention the Reg Number to complete registration\nWe will email your tickets within 30 minutes`);
+alert(`Please Zelle the amount to 609-937-2008 and mention the Reg Number ${regNumber}\n to complete registration. We will email your tickets shortly`);
 
 // Close modal and reset form
 modal.style.display = 'none';
@@ -83,6 +83,7 @@ form.reset();
 this.submit();
 });
 
+/*
 // Registration Lookup
 document.getElementById('lookupBtn').addEventListener('click', function() {
 const regNumber = document.getElementById('regNumberInput').value.trim();
@@ -137,7 +138,7 @@ registrationsDiv.innerHTML = recentRegistrations.map(reg => `
 }
 
 // Initialize display
-displayRegistrations();
+//displayRegistrations();
 
 // Allow Enter key in lookup field
 document.getElementById('regNumberInput').addEventListener('keypress', function(e) {
@@ -145,3 +146,4 @@ if (e.key === 'Enter') {
 document.getElementById('lookupBtn').click();
 }
 });
+*/
