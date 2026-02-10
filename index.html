@@ -1,367 +1,128 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
-{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;\red16\green60\blue192;
-\red28\green35\blue48;}
-{\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;\cssrgb\c6667\c33333\c80000;
-\cssrgb\c14510\c18431\c24706;}
-\margl1440\margr1440\vieww24300\viewh13620\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs20 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE html>
-\fs24 \
-
-\fs20 <html lang="en">
-\fs24 \
-
-\fs20 <head>
-\fs24 \
-
-\fs20 <meta charset="UTF-8">
-\fs24 \
-
-\fs20 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-\fs24 \
-
-\fs20 <title>Musical Event Registration</title>
-\fs24 \
-
-\fs20 <link rel="stylesheet" href="style.css">
-\fs24 \
-
-\fs20 <link rel="stylesheet" href="{\field{\*\fldinst{HYPERLINK "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}}">
-\fs24 \
-
-\fs20 </head>
-\fs24 \
-
-\fs20 <body>
-\fs24 \
-
-\fs20 <div class="container">
-\fs24 \
-
-\fs20 <!-- Header Section -->
-\fs24 \
-
-\fs20 <header>
-\fs24 \
-
-\fs20 <h1><i class="fas fa-music"></i> Annual Musical Event 2024</h1>
-\fs24 \
-
-\fs20 <p class="subtitle">Presented by Your Non-Profit Organization</p>
-\fs24 \
-
-\fs20 </header>
-\fs24 \
-\
-
-\fs20 <!-- Event Details Section -->
-\fs24 \
-
-\fs20 <section class="event-details">
-\fs24 \
-
-\fs20 <div class="flier-container">
-\fs24 \
-
-\fs20 <img src="flier.jpg" alt="Event Flier" class="event-flier">
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="details">
-\fs24 \
-
-\fs20 <h2><i class="fas fa-calendar-alt"></i> Event Details</h2>
-\fs24 \
-
-\fs20 <div class="detail-item">
-\fs24 \
-
-\fs20 <i class="fas fa-map-marker-alt"></i>
-\fs24 \
-
-\fs20 <span><strong>Venue:</strong> City Concert Hall</span>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 <div class="detail-item">
-\fs24 \
-
-\fs20 <i class="fas fa-clock"></i>
-\fs24 \
-
-\fs20 <span><strong>Date & Time:</strong> December 15, 2024 | 6:00 PM</span>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 <div class="detail-item">
-\fs24 \
-
-\fs20 <i class="fas fa-info-circle"></i>
-\fs24 \
-
-\fs20 <span><strong>Featuring:</strong> Live performances, food, and charity auction</span>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 <button class="register-btn" id="openRegistration">
-\fs24 \
-
-\fs20 <i class="fas fa-user-plus"></i> Register Now
-\fs24 \
-
-\fs20 </button>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 </section>
-\fs24 \
-\
-
-\fs20 <!-- Registration Modal -->
-\fs24 \
-
-\fs20 <div class="modal" id="registrationModal">
-\fs24 \
-
-\fs20 <div class="modal-content">
-\fs24 \
-
-\fs20 <span class="close">&times;</span>
-\fs24 \
-
-\fs20 <h2><i class="fas fa-edit"></i> Event Registration</h2>
-\fs24 \
-\pard\pardeftab720\partightenfactor0
-
-\fs48 \cf2 \
-<form id="registrationForm" action="{\field{\*\fldinst{HYPERLINK "https://submit-form.com/YOUR-FORMSPARK-ID"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 https://submit-form.com/}}
-\f1\fs24 \cf5 \cb1 \outl0\strokewidth0 OeJ7aPuUE
-\f0\fs48 \cf2 \cb3 \outl0\strokewidth0 \strokec2 " method="POST">
-\fs24 \
-\pard\pardeftab720\partightenfactor0
-
-\fs20 \cf2 <input type="hidden" name="registration_date" id="regDate">
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
-\fs24 \
-
-\fs20 <input type="text" id="fullName" name="fullName" required>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="email"><i class="fas fa-envelope"></i> Email *</label>
-\fs24 \
-
-\fs20 <input type="email" id="email" name="email" required>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
-\fs24 \
-
-\fs20 <input type="tel" id="phone" name="phone">
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="attendees"><i class="fas fa-users"></i> Number of Attendees *</label>
-\fs24 \
-
-\fs20 <select id="attendees" name="attendees" required>
-\fs24 \
-
-\fs20 <option value="">Select</option>
-\fs24 \
-
-\fs20 <option value="1">1 Person</option>
-\fs24 \
-
-\fs20 <option value="2">2 People</option>
-\fs24 \
-
-\fs20 <option value="3">3 People</option>
-\fs24 \
-
-\fs20 <option value="4">4 People</option>
-\fs24 \
-
-\fs20 <option value="5">5+ People</option>
-\fs24 \
-
-\fs20 </select>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="foodPreference"><i class="fas fa-utensils"></i> Food Preference *</label>
-\fs24 \
-
-\fs20 <select id="foodPreference" name="foodPreference" required>
-\fs24 \
-
-\fs20 <option value="">Select</option>
-\fs24 \
-
-\fs20 <option value="vegetarian">Vegetarian</option>
-\fs24 \
-
-\fs20 <option value="non-vegetarian">Non-Vegetarian</option>
-\fs24 \
-
-\fs20 <option value="vegan">Vegan</option>
-\fs24 \
-
-\fs20 <option value="gluten-free">Gluten-Free</option>
-\fs24 \
-
-\fs20 <option value="no-preference">No Preference</option>
-\fs24 \
-
-\fs20 </select>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="donation"><i class="fas fa-donate"></i> Donation Amount ($) *</label>
-\fs24 \
-
-\fs20 <input type="number" id="donation" name="donation" min="0" step="1" required>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <div class="form-group">
-\fs24 \
-
-\fs20 <label for="comments"><i class="fas fa-comment"></i> Additional Comments</label>
-\fs24 \
-
-\fs20 <textarea id="comments" name="comments" rows="3"></textarea>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <button type="submit" class="submit-btn">
-\fs24 \
-
-\fs20 <i class="fas fa-paper-plane"></i> Submit Registration
-\fs24 \
-
-\fs20 </button>
-\fs24 \
-
-\fs20 </form>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <!-- Registration Lookup Section -->
-\fs24 \
-
-\fs20 <section class="lookup-section">
-\fs24 \
-
-\fs20 <h2><i class="fas fa-search"></i> Lookup Registration</h2>
-\fs24 \
-
-\fs20 <div class="lookup-form">
-\fs24 \
-
-\fs20 <input type="text" id="regNumberInput" placeholder="Enter your Registration Number">
-\fs24 \
-
-\fs20 <button id="lookupBtn">Search</button>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-
-\fs20 <div id="lookupResult"></div>
-\fs24 \
-
-\fs20 </section>
-\fs24 \
-\
-
-\fs20 <!-- Registration List (Admin View) -->
-\fs24 \
-
-\fs20 <section class="registrations-section" id="registrationsList">
-\fs24 \
-
-\fs20 <h2><i class="fas fa-list"></i> Recent Registrations</h2>
-\fs24 \
-
-\fs20 <div id="registrations"></div>
-\fs24 \
-
-\fs20 </section>
-\fs24 \
-
-\fs20 </div>
-\fs24 \
-\
-
-\fs20 <script src="script.js"></script>
-\fs24 \
-
-\fs20 </body>
-\fs24 \
-
-\fs20 </html>}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musical Event Registration</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<!-- Header Section -->
+<header>
+<h1><i class="fas fa-music"></i> Annual Musical Event 2024</h1>
+<p class="subtitle">Presented by Your Non-Profit Organization</p>
+</header>
+
+<!-- Event Details Section -->
+<section class="event-details">
+<div class="flier-container">
+<img src="flier.jpg" alt="Event Flier" class="event-flier">
+</div>
+
+<div class="details">
+<h2><i class="fas fa-calendar-alt"></i> Event Details</h2>
+<div class="detail-item">
+<i class="fas fa-map-marker-alt"></i>
+<span><strong>Venue:</strong> City Concert Hall</span>
+</div>
+<div class="detail-item">
+<i class="fas fa-clock"></i>
+<span><strong>Date & Time:</strong> December 15, 2024 | 6:00 PM</span>
+</div>
+<div class="detail-item">
+<i class="fas fa-info-circle"></i>
+<span><strong>Featuring:</strong> Live performances, food, and charity auction</span>
+</div>
+<button class="register-btn" id="openRegistration">
+<i class="fas fa-user-plus"></i> Register Now
+</button>
+</div>
+</section>
+
+<!-- Registration Modal -->
+<div class="modal" id="registrationModal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<h2><i class="fas fa-edit"></i> Event Registration</h2>
+
+<form id="registrationForm" action="https://submit-form.com/OeJ7aPuUE" method="POST">
+<input type="hidden" name="registration_date" id="regDate">
+
+<div class="form-group">
+<label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+<input type="text" id="fullName" name="fullName" required>
+</div>
+
+<div class="form-group">
+<label for="email"><i class="fas fa-envelope"></i> Email *</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div class="form-group">
+<label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+<input type="tel" id="phone" name="phone">
+</div>
+
+<div class="form-group">
+<label for="attendees"><i class="fas fa-users"></i> Number of Attendees *</label>
+<select id="attendees" name="attendees" required>
+<option value="">Select</option>
+<option value="1">1 Person</option>
+<option value="2">2 People</option>
+<option value="3">3 People</option>
+<option value="4">4 People</option>
+<option value="5">5+ People</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="foodPreference"><i class="fas fa-utensils"></i> Food Preference *</label>
+<select id="foodPreference" name="foodPreference" required>
+<option value="">Select</option>
+<option value="vegetarian">Vegetarian</option>
+<option value="non-vegetarian">Non-Vegetarian</option>
+<option value="vegan">Vegan</option>
+<option value="gluten-free">Gluten-Free</option>
+<option value="no-preference">No Preference</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="donation"><i class="fas fa-donate"></i> Donation Amount ($) *</label>
+<input type="number" id="donation" name="donation" min="0" step="1" required>
+</div>
+
+<div class="form-group">
+<label for="comments"><i class="fas fa-comment"></i> Additional Comments</label>
+<textarea id="comments" name="comments" rows="3"></textarea>
+</div>
+
+<button type="submit" class="submit-btn">
+<i class="fas fa-paper-plane"></i> Submit Registration
+</button>
+</form>
+</div>
+</div>
+
+<!-- Registration Lookup Section -->
+<section class="lookup-section">
+<h2><i class="fas fa-search"></i> Lookup Registration</h2>
+<div class="lookup-form">
+<input type="text" id="regNumberInput" placeholder="Enter your Registration Number">
+<button id="lookupBtn">Search</button>
+</div>
+<div id="lookupResult"></div>
+</section>
+
+<!-- Registration List (Admin View) -->
+<section class="registrations-section" id="registrationsList">
+<h2><i class="fas fa-list"></i> Recent Registrations</h2>
+<div id="registrations"></div>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
