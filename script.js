@@ -47,11 +47,7 @@ hiddenInput.type = 'hidden';
 hiddenInput.name = 'registration_number';
 hiddenInput.value = regNumber;
 this.appendChild(hiddenInput);
-
-// Debugiing
-//alert(`Your Name: ${document.getElementById('fullName').value}\n`);
   
-
 // For demo purposes - store in localStorage
 const registration = {
 regNumber: regNumber,
@@ -63,13 +59,16 @@ donation: document.getElementById('donation').value,
 date: document.getElementById('regDate').value
 };
 
+// Debugiing
+alert(`Data ${registration}\n`);
+  
 // Store in localStorage
 let registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
 registrations.push(registration);
 localStorage.setItem('registrations', JSON.stringify(registrations));
 
 // Display success message
-alert(`Please Zelle the amount to 609-937-2008 and mention the Reg Number ${regNumber}\n to complete registration. We will email your tickets shortly`);
+alert(`Please Zelle the amount to 609-937-2008 and mention the Reg Number ${regNumber} to complete registration. We will email your tickets shortly.`);
 
 // Close modal and reset form
 modal.style.display = 'none';
@@ -79,8 +78,20 @@ form.reset();
 // Update registrations display
 //displayRegistrations();
 
-// Submit to Formspark (real submission)
-this.submit();
+try {
+  // Submit to Formspark (real submission)
+  const result = this.submit();
+  console.log(result);
+} catch (error) {
+  // Code to handle the error
+  console.error("An error occurred:", error.message);
+  // Log the error to a service, show a user-friendly message, etc.
+} finally {
+  // Code that runs in both success and failure cases
+  console.log("Cleanup finished.");
+}
+  
+
 });
 
 /*
